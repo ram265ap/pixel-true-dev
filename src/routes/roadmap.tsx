@@ -13,6 +13,8 @@ export const Route = createFileRoute("/roadmap")({
       { name: "description", content: "Your saved opportunities organised into a deadline-driven career timeline." },
       { property: "og:title", content: "Your Roadmap — MatchEd" },
       { property: "og:description", content: "Your saved opportunities organised into a deadline-driven career timeline." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Roadmap,
@@ -58,7 +60,7 @@ function Roadmap() {
         {items.length === 0 ? (
           <div className="mt-10 rounded-3xl border border-dashed p-12 text-center">
             <p className="font-display text-2xl">Nothing saved yet.</p>
-            <Link to="/" className="mt-4 inline-flex rounded-full bg-primary px-5 py-2 text-sm text-primary-foreground">Start swiping</Link>
+            <Link to="/discover" className="mt-4 inline-flex rounded-full bg-primary px-5 py-2 text-sm text-primary-foreground">Start swiping</Link>
           </div>
         ) : (
           <div className="mt-10 space-y-10">
