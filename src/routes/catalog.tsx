@@ -13,6 +13,8 @@ export const Route = createFileRoute("/catalog")({
       { name: "description", content: "Search and filter every student opportunity in one curated catalog." },
       { property: "og:title", content: "Catalog — MatchEd" },
       { property: "og:description", content: "Search and filter every student opportunity in one curated catalog." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Catalog,
