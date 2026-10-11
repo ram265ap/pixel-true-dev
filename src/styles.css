@@ -177,6 +177,10 @@
 .landing-footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-block: 36px; }
 .landing-footer p, .landing-footer div, .footer-note { font-size: 11px; color: var(--muted-foreground); }
 .footer-note { flex-basis: 100%; border-top: 1px solid var(--border); padding-top: 22px; margin-top: 10px; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content h1 { font-size: 80px; }
+  .hero-content h2 { font-size: 34px; }
+}
 @media (max-width: 767px) {
   .hero-content { padding-top: 35px; padding-bottom: 27px; }
   .hero-content h1 { font-size: 42px; }
