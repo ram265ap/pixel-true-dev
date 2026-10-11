@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, Bookmark, BookmarkCheck, Check, ChevronDown, Compass, GraduationCap, MapPin, Sparkles, Target } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Bookmark, BookmarkCheck, Check, ChevronDown, Compass, GraduationCap, Sparkles, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OPPORTUNITIES, TRACKS, type Track } from "@/lib/data";
 import { useStore } from "@/lib/store";
 import { TrackBadge, Deadline } from "@/components/OppBits";
-import campus from "@/assets/campus-students.jpg";
+import { OpportunityFlow } from "@/components/OpportunityFlow";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -34,20 +34,19 @@ function Landing() {
 
   return <div className="landing">
     <section className="landing-hero">
-      <img src={campus} width={1920} height={1024} fetchPriority="high" alt="Students walking together on a bright Singapore-style university campus" className="hero-photo" />
-      <div className="hero-wash" />
       <div className="hero-content page-width">
-        <p className="hero-eyebrow"><span className="h-2 w-2 rounded-full bg-primary" /> Big possibilities. Right here in Singapore.</p>
+        <p className="hero-eyebrow"><span className="hero-status" /> FOR THE NEXT GENERATION OF WHAT'S NEXT</p>
         <h1>MatchEd<span className="text-primary">.</span></h1>
-        <h2>Your next chapter.<br /><span className="text-primary">Not just your next application.</span></h2>
-        <p className="hero-description">Find opportunities that feel like <strong>you</strong>. From your first hackathon to your dream internship, discover where your interests can take you.</p>
+        <h2>Your ambition.<br className="hero-mobile-break" /> <span className="hero-highlight">Your next move.</span></h2>
+        <p className="hero-description">Not another endless search. Find internships, competitions and fellowships that match who you are — and who you're becoming.</p>
         <div className="hero-actions">
           <Button asChild size="lg"><Link to="/discover">Find my match <ArrowUpRight /></Link></Button>
           <Button asChild variant="outline" size="lg"><Link to="/catalog">Explore opportunities <ArrowRight /></Link></Button>
         </div>
-        <div className="hero-notes"><span><Check size={14} /> For secondary & university students</span><span><Check size={14} /> Your interests. Your pace.</span></div>
+        <div className="hero-notes"><span><Check size={13} /> Secondary & university</span><span><Check size={13} /> Made for Singapore</span></div>
       </div>
-      <div className="hero-caption"><MapPin size={14} /><span>A world of possibility, closer than you think.</span></div>
+      <OpportunityFlow />
+      <div className="hero-footer"><span>LESS SCROLLING. MORE POSSIBILITY.</span><span>EXPLORE YOUR NEXT <ArrowRight size={12} /></span></div>
     </section>
 
     <div className="category-strip" aria-label="Opportunity types"><div className="page-width"><span>YOUR NEXT COULD BE</span>{["An internship", "A hackathon", "A fellowship", "A competition", "A new direction"].map(t => <p key={t}><Sparkles size={16} />{t}</p>)}</div></div>
