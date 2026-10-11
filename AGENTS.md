@@ -12,3 +12,4 @@
 - Keep the public landing page at `/` and the existing swipe experience at `/discover`; this lets visitors explore before onboarding.
 - Gate first-time onboarding only on experience pages, not on the public landing page; the homepage must remain unobstructed.
 - Define landing-page styling and semantic colors in the global stylesheet and use the shared Button for new controls; this keeps the public page and app consistent.
+- Keep the landing opportunity animation in a browser-safe presentational component using catalog data and CSS motion with reduced-motion support; it stays SSR-safe and does not alter matching logic.

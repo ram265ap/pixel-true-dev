@@ -1,4 +1,4 @@
 # MatchEd landing page
-- [ ] Build the blue-and-white, Syne/Plus Jakarta Sans landing page inspired by Cordy and Pathway.
+- [ ] Replace the photo-led opening with a sleek, photo-free animated landing page.
 - [ ] Preserve Discover, Catalog, Roadmap and onboarding access.
-- [ ] Verify navigation, imagery, layout and page metadata.
+- [ ] Verify animation, navigation, layout and page metadata.
